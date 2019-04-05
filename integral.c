@@ -7,7 +7,7 @@
 int main(int argc, char *argv[]) {
   clock_t t1 = clock();
   int rank, size, rcode;
-  const long int intervals = 100000L ; /* The sum is [globally]
+  const long int intervals = atoi(argv[1]); /* The sum is [globally]
                                              divided into this many
                                              intervals     */
   int chunk;             /* This many iterations will I do */
