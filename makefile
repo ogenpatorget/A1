@@ -1,5 +1,6 @@
-integral: integral.c
-	mpicc integral.c -o integral -std=c99 -lm -lmpi
-
+integral: 2dintegral.c
+	mpicc -O3 2dintegral.c -o 2dintegral -std=c99 -lm -lmpi
 run:
-	mpirun -n 4 integral
+	mpirun -n 4 2dintegral 10000
+clean:
+	rm 2dintegral
